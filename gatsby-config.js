@@ -3,6 +3,14 @@ module.exports = {
     title: 'with.heart',
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/blog`,
+        name: 'markdown-pages',
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',
     {
